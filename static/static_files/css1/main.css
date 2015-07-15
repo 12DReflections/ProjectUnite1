@@ -29,6 +29,7 @@ h4 {
 	font-size: 16px;
 }
 a {
+font-size: 20px;
 	color: #c52d2f;
 	-webkit-transition: color 300ms, background-color 300ms;
 	-moz-transition: color 300ms, background-color 300ms;
@@ -120,7 +121,8 @@ body > section {
 
 .navbar>.container .navbar-brand {
 	margin-left: 0;
-}
+	/*want to raise 30 px, not working*/
+	}
 .navbar-brand {
 	padding: 0;
 	margin: 0;
@@ -129,7 +131,7 @@ body > section {
 	border-radius: 0;
 	margin-bottom: 0;
 	background: #151515;
-	padding: 15px 0;
+	padding: 30px 0;
 	padding-bottom: 0;
 }
 .navbar-nav {
@@ -162,6 +164,8 @@ body > section {
 }
 .navbar-inverse .navbar-brand .fa {
 	color: #3498db;
+
+	
 }
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
 	background-color: #333;

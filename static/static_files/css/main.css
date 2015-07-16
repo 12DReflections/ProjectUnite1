@@ -121,10 +121,12 @@ body > section {
 
 .navbar>.container .navbar-brand {
 	margin-left: 0;
-	/*want to raise 30 px, not working*/
+ 
 	}
 .navbar-brand {
-	padding: 0;
+	vertical-align: top;
+
+	padding-bottom: 30px;
 	margin: 0;
 }
 .navbar {
@@ -177,13 +179,14 @@ body > section {
 #main-slider {
 	position: relative;
 	text-align: center;
+	height: 450px;
 }
 .no-margin {
 	margin: 0;
 	padding: 0;
 }
 #main-slider .carousel .carousel-content {
-	margin-top: 150px;
+	margin-top: 0px;
 }
 #main-slider .carousel .slide-margin {
 	margin-top: 100px;
@@ -790,3 +793,5 @@ a.social-icon:hover, a.social-icon:active, a.social-icon:focus {
 	color: #3276b1;
 	border-color: #3276b1;
 }
+
+

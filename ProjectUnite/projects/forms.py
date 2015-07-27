@@ -24,4 +24,10 @@ class FormProjectTitle(forms.ModelForm):
 		team_members = self.cleaned_data.get('team_members')
 		return team_members
 
+class FormSearchProject(forms.ModelForm):
+	class Meta:
+		model = ProjectTitle
+		fields = ['location', 'ProjectType']
+	
+
 	

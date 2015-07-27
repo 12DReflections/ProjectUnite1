@@ -1,6 +1,6 @@
 from django import forms
 
-from .models import SignUp, UserPicture
+from .models import SignUp
 
 class ContactForm(forms.Form):
 	full_name = forms.CharField()
@@ -36,7 +36,7 @@ class SignUpForm(forms.ModelForm):
 		Currentprojects = self.cleaned_data.get('Currentprojects')
 		return Currentprojects
 
-class UserPictureForm(forms.ModelForm):
-	class Meta:
-		model = UserPicture
-		fields = ['image']
+#class UserPictureForm(forms.ModelForm):
+#	class Meta:
+#		model = UserPicture
+	#	fields = ['image']

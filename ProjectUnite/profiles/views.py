@@ -1,23 +1,28 @@
 from django.shortcuts import render, RequestContext, render_to_response, Http404
-from .forms import ContactForm, SignUpForm, UserPictureForm
+from .forms import ContactForm, SignUpForm
 from django.contrib.auth.models import User
-from .models import SignUp, UserPicture
+from .models import SignUp
 
 
 #@login_required
 def edit_profile(request):
 	user = request.user
-	signup = SignUp.objects.get(user=user)
-	picture = UserPicture.objects.get(user=user)
-	signup_form = SignUpForm(request.POST or None, prefix = 'signup', instance = signup)
-	user_picture_form = UserPictureForm(request.POST or None, prefix = 'pic', instance = picture)
-	
+	try:
+		signup = SignUp.objects.get(user=user)
+		#picture = UserPicture.objects.get(user=user)
+		signup_form = SignUpForm(request.POST or None, prefix = 'signup', instance = signup)
+		#user_picture_form = UserPictureForm(request.POST or None, prefix = 'pic', instance = picture)
+		
 
-	if signup_form.is_valid() and user_picture_form.is_valid():
-		form1 = signup_form.save(commit=False)
-		form1.save()
-		form2 = user_picture_form.save(commit =False)
-		form2.save()
+		if signup_form.is_valid():
+			form1 = signup_form.save(commit=False)
+			form1.save()
+			#	form2 = user_picture_form.save(commit =False)
+			form2.save()
+	except:
+		form = SignUpForm
+		if form.is_valid():
+			form.save()
 
 
 
